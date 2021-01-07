@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程心得</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="css/style.css" style="text/css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: '微软雅黑';
+        background-color: #f3ebbf;
+    }
+    
+    .text-box {
+        margin-top: 100px;
+        text-align: center;
+        line-height: 1;
+        font-size: 100px;
+    
+    }
+    
+    .text-box span {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .text-box span::before,
+    .text-box span::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 1s;
+        transform-origin: left center;
+    }
+    
+    .text-box span::before {
+        z-index: 3;
+        color: #FFF;
+        transform: rotateY(-15deg);
+    }
+    
+    .text-box span::after {
+        z-index: 2;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .text-box:hover span::before {
+        transform: rotateY(-40deg) skew(0deg, 5deg);
+    }
+    
+    .text-box:hover span::after {
+        transform: skew(0deg, 20deg);
+    }
+    <style>
+        .wrap{
+            width:500px;
+            height: 350px;
+            box-shadow: 10px 10px 5px #888888;
+            margin:10 auto;
+            position: relative;
+
+        }
+        #left{
+            width:50%;
+            height:300px;
+            font-size: 24px;
+            position: absolute;
+            top:500;
+            left:50%;
+         
+
+        }
+        #right{
+            width:50%;
+            height:300px;
+               font-size: 24px;
+           box-shadow: 10px 10px 5px #888888;
+
+            position: absolute;
+            top:500px;
+            right:50%;
+        }
+    
+ 
+
+    </style>
+</head>
+
+<body>
+<button type="button" class="btn btn-default"><a href="index.html">返回首页</a></button>
+    <div class="text-box">
+        <span data-text="课">课</span>
+        <span data-text="程">程</span>
+        <span data-text="心">心</span>
+        <span data-text="得">得</span>
+    </div>
+   <!--  <div class="text">
+    
+    </div> -->
+    <body>
+<div class="wrap">
+    <aside id="left"><p>首先我们要做的酒店选择好题目和网站的风格，之后我们就分步骤准备在制作网站前所要做好的准备工作。我浏览了学校官网以及相关网站的特点，借鉴这些网站的优秀之处，不好的地方在自己的网站上加以改良，从而使自己的网站更加美观。</p></aside>
+    <section id="right"><p>在选择好题目和网站的风格之后，我就开始了期末考试项目的进程，按照实训方案的规定，使用bootstrap框架，加上CSS样式美化，用bootstrap设计网站结构、导航结构和链接结构，设计首页及其页面的版式结构。然后创建本地网站，让所有的网站可以在线浏览。最后测试与浏览网页，如果还有什么不理想的地方在改进再预览，如此反复，最后达到最好效果。</p></section>
+</div>
+</body>
+
+</html>

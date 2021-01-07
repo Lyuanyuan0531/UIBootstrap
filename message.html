@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>意见反馈</title>
+    <!-- 添加ico图标 -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="css/style.css" style="text/css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		header{
+			height: 66px;
+			width: 100%;
+			background-color: #eee;
+			padding:5px 0 0 50px;
+		}
+		table tr td{
+			height: 60px;
+		}
+		select{
+			height: 20px;
+			width: 100px;
+		}
+		input[type='text'],input[type='number'],input[type='date']{
+			border:none;
+			border-bottom:2px solid #ddd;
+			height: 30px;
+		}
+		button[type="submit"]{
+			background-color: #ff4400;
+			height: 25px;
+			width: 50px;
+		}
+
+	</style>
+</head>
+<body>
+<header>
+	<img src="images/text.png" alt="">
+	<img src="images/vote.png" alt="">
+	<br>
+	建议 	投诉	
+</header>
+<!-- 使用table布局，选用合适的控件，完成效果图的布局 -->
+<form action="register.php" method="post">
+<table>
+	<tr>
+		<td>投诉：
+		<select required="required" name="ea" style="width: 150px;height: 100">
+		<option></option>
+		<option>网站用户信息不安全</option>
+        <option>网站不能发表评论</option>
+        <option>网站不能跳转、访问</option>
+        <option>网站的客户服务不好</option>
+        <option>网站的服务不够全面</option>
+        
+        </select>
+        </td>
+
+		<td>建议：
+		<select>
+		<option></option>
+		<option>建议调整网页排版</option>
+        <option>建议缩减网页内容</option>
+        <option>建议提高网站用户体验</option>
+        <option>建议美化网页</option>
+        <option>建议增设服务</option>
+        <option>其他</option>
+        </select>
+		
+		<input type="submit"></td>
+	</tr>
+
+	<tr>
+		<td>建议选项：</td>
+		<td >
+		1、选项:<input type="text" required="required" name="ee">
+		链接:<input type="text" required="required" name="ee">
+		<img src="images/add.png" width="25" height="25">
+		<img src="images/close.png" width="25" height="25"><br> 
+		2、选项:<input type="text" required="required" name="ee">
+		链接:<input type="text" required="required" name="ee">
+		<img src="images/add.png" width="25" height="25">
+		<img src="images/close.png" width="25" height="25"></td>
+
+
+
+
+		
+		<td></td>
+	</tr>
+	<tr>
+		<td>最多可选：<input type="text" name="es" required="required" oninput="value=value.replace(/[^\d]/g,'')">项</td>
+		<td>结束时间：<input type="text" name="er" oninput="value=value.replace(/[^\d]/g,'')" maxlength="4">年<input type="text" name="er" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2">月
+		<input type="text" name="er" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2">日
+
+		</td>
+
+	</tr>
+	<tr>
+		<td>详情描述：</td>
+		<td colspan="2"><input type="" name="ed" style="width: 400px;height: 200px"/></td>
+		
+	</tr>
+	<tr>
+		<td>上传文件：<input type="file" multipart="multipart" name="ez"></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+
+
+</form>
+</body>
+<script>
+	// 这里设置验证表单时自定义的错误文本提示内容
+	var text = document.getElementById('es');
+	var text = document.getElementById('ee');
+	var text = document.getElementById('ea');
+	text.oninvalid=function(){
+ var v = text.validity;
+                  console.log(v);
+ if(true === v.valueMissing){
+  this.setCustomValidity("建议标题不能为空");
+ }
+ else{
+  this.setCustomValidity("");
+
+ }
+
+}
+</script>
+<button type="button" class="btn btn-default"><a href="index.html">返回首页</a></button>
+</html>
